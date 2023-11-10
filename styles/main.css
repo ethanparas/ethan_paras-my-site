@@ -1,3 +1,12 @@
 html {
-  background-color: antiquewhite;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-family: "Young Serif", cursive;
+}
+main {
+  width: 30%;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: rgb(168, 220, 223);
+  border-radius: 2em;
 }
