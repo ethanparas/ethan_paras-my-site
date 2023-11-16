@@ -1,12 +1,45 @@
 html {
-  background-color: rgb(255, 255, 255);
+  background-color: grey;
   color: rgb(0, 0, 0);
   font-family: "Young Serif", cursive;
 }
-main {
+body {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2em;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2em;
+}
+
+.header {
   width: 30%;
   margin: 0 auto;
   padding: 2em;
-  background-color: rgb(168, 220, 223);
-  border-radius: 2em;
+}
+/* Change color on hover */
+.navbar a:hover {
+  background-color: white;
+  color: rgb(84, 84, 84);
+}
+.class {
+  overflow: hidden;
+}
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: rgb(0, 0, 0); /* White text color */
+  text-align: center; /* Center the text */
+  padding: 14px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.header {
+  font-size: 100;
 }
