@@ -5,6 +5,11 @@ html {
   color: rgb(0, 0, 0);
   font-family: "Young Serif", cursive;
 }
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   width: 90%;
   margin: 0 auto;
@@ -17,7 +22,7 @@ body {
   height: 500px;
   margin: 0 auto;
   padding: 2em;
-  background-image: url("../images/c161240abc635dd8506edc8eafff44ec.jpeg");
+  background-image: url("../images/Willem-DaFoe-Images/c161240abc635dd8506edc8eafff44ec.jpeg");
   background-size: cover;
 }
 
@@ -26,6 +31,7 @@ body {
   top: 0px;
   height: 60px;
   background-color: #fff;
+  z-index: 10;
 }
 
 .navbar ul {
@@ -67,7 +73,7 @@ img {
 /* Feel free to adjust these values to change the width of your text box, vertical spacing, and drop shadow color. */
 .header p {
   font-size: 1em;
-  width: 400px;
+  width: 450px;
   margin: 100px auto 0 auto;
   color: #fff;
   text-shadow: 0 0 3px #00000070;
@@ -167,11 +173,17 @@ img {
   padding: 0;
 }
 
+.carousel ol.carousel__viewport {
+  height: 500px;
+}
+
 .carousel {
   position: relative;
-  padding-top: 75%;
+  padding-top: 466px;
   filter: drop-shadow(0 0 10px #0003);
   perspective: 100px;
+  max-width: 560px;
+  margin: 0 auto;
 }
 
 .carousel__viewport {
@@ -259,7 +271,7 @@ img {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #333;
+  background-color: #6e2f2f;
   background-clip: content-box;
   border: 0.25rem solid transparent;
   border-radius: 50%;
@@ -313,4 +325,110 @@ img {
 
 .carousel::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+/* GALLERY */
+
+/* body {
+	font-family: Lato, sans-serif;
+	margin: 0;
+	padding: 1rem;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(20, 20, 20, 1);
+} */
+
+.gallery img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 1000ms;
+}
+
+ul.gallery {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  max-width: 100%;
+  width: 70rem;
+}
+
+.gallery figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery figure::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(0, 0, 0, 0.5);
+  transform-origin: center;
+  opacity: 0;
+  transform: scale(2);
+  transition: opacity 300ms;
+}
+
+.gallery figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 600ms, transform 600ms;
+}
+
+.gallery a:is(:hover, :focus) figure::after {
+  opacity: 1;
+}
+
+.gallery a:is(:hover, :focus) figcaption {
+  opacity: 1;
+  transition: opacity 600ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gallery figcaption {
+    transform: translate3d(0, 2rem, 0);
+  }
+
+  .gallery figure::after {
+    border-radius: 50%;
+    opacity: 1;
+    transform: scale(0);
+    transition: transform 900ms;
+  }
+
+  .gallery a:is(:hover, :focus) figure::after {
+    transform: scale(2.5);
+  }
+
+  .gallery a:is(:hover, :focus) figcaption {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 600ms 400ms, transform 600ms 400ms;
+  }
+
+  .gallery a:is(:hover, :focus) img {
+    transform: scale(1.2);
+  }
 }
