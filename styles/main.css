@@ -19,10 +19,10 @@ body {
 }
 
 .header {
-  height: 500px;
+  height: 1110px;
   margin: 0 auto;
-  padding: 2em;
-  background-image: url("../images/Willem-DaFoe-Images/c161240abc635dd8506edc8eafff44ec.jpeg");
+  padding: 1em;
+  background-image: url("../images/Willem-DaFoe-Images/home.jpeg");
   background-size: cover;
 }
 
@@ -67,7 +67,7 @@ img {
 }
 
 .header h1 {
-  font-size: 5.5em;
+  font-size: 6em;
 }
 
 /* Feel free to adjust these values to change the width of your text box, vertical spacing, and drop shadow color. */
@@ -75,8 +75,7 @@ img {
   font-size: 1em;
   width: 450px;
   margin: 100px auto 0 auto;
-  color: #fff;
-  text-shadow: 0 0 3px #00000070;
+  color: #000000;
 }
 
 /* Media Queries */
@@ -203,7 +202,7 @@ img {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  background-image: url("http://placekitten.com/914/670");
+  background-image: url("../images/Willem-DaFoe-Films/american-psycho.jpeg");
   counter-increment: item;
 }
 
