@@ -203,18 +203,21 @@ img {
   flex: 0 0 100%;
   width: 100%;
   background-image: url("../images/Willem-DaFoe-Films/american-psycho.jpeg");
-  size: 2592px 3840px;
-  counter-increment: item;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   color: #000000;
   font-size: 2em;
 }
 
 .carousel__slide:nth-child(even) {
-  background-color: #99f;
+  background-color: #fff;
+}
+.carousel__slide:nth-child(odd) {
+  background-color: #fff;
 }
 
 .carousel__slide:before {
-  content: counter(item);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -447,7 +450,6 @@ ul.gallery {
 .input-container input {
   width: 80%;
   border: none;
-  align-content: center;
 }
 
 .input-container button {
